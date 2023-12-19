@@ -76,3 +76,24 @@ export function exercise05(args) {
 
   return false
 }
+
+export function exercise06(args) {
+  const input = args
+  const result = []
+  let capitalLetters = 0
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+
+    const asciiCode = currentElement.charCodeAt(0)
+    if (
+      asciiCode <= 31 ||
+      (asciiCode >= 33 && asciiCode <= 64) ||
+      (asciiCode >= 91 && asciiCode <= 96) ||
+      asciiCode >= 123
+    ) {
+      return true
+    }
+  }
+  return false
+}
