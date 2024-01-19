@@ -10,6 +10,7 @@ export function exercise01(args) {
       // If the current element is "e" or "E", replace it with an empty string
       result.push("")
     } else {
+      // Otherwise, keep the current element unchanged
       result.push(currentElement)
     }
   }
@@ -115,4 +116,22 @@ export function exercise07(text) {
 
   // Test if the regex pattern is found in the text
   return regex.test(text)
+}
+
+export function exercise08(args) {
+  const input = args
+  const result = []
+
+  for (let i = 0; i < input.length; i++) {
+    const currentElement = input[i]
+    if (currentElement === "e") {
+      // If the currentElement is a "e", replace it with a "3"
+      result.push("3")
+    } else {
+      // Otherwise, keep the current element unchanged
+      result.push(currentElement)
+    }
+  }
+  // Combine array elements into a string
+  return result.join("")
 }
