@@ -97,3 +97,11 @@ export function exercise06(args) {
   }
   return false
 }
+
+export function exercise07(text) {
+  // Use a regular expression to match the whole word 'and' (case-insensitive)
+  const regex = /\band\b/i
+
+  // Test if the regex pattern is found in the text
+  return regex.test(text)
+}
